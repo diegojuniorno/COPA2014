@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COPA JOGOS DO BRASIL -- DIEGO JR. N. OLIVEIRA 1036442</title>
+</head>
+<body>
+<form method="POST" action="/salvar/">{%csrf_token%}
+<input type="text" name="Brasil" value="">
+<input type="text" name="Placar1" value="">X
+<input type="text" name="Placar2" value="">
+<input type="text" name="Croacia" value="">
+
+
+
+<input type="text" name="Brasil" value="">
+<input type="text" name="Placar1" value="">X
+<input type="text" name="Placar2" value="">
+<input type="text" name="Mexico" value="">
+
+
+<input type="text" name="Brasil" value="">
+<input type="text" name="Placar1" value="">X
+<input type="text" name="Placar2" value="">
+<input type="text" name="Camaroes" value="">
+
+
+ <br>
+ <input type="submit" value="Salvar" name='salvar'>
+
+</form>
+
+({% for item in jogo%}
+{{item.Brasil}} {{item.Placar1}} x {{item.Placar2}} {{item.Croacia}} <br>
+{{item.Brasil}} {{item.Placar1}} x {{item.Placar2}} {{item.Mexico}} <br>
+{{item.Brasil}} {{item.Placar1}} x {{item.Placar2}} {{item.Camaroes}} <br>
+
+{% endfor%}
+</body>
+</html>
